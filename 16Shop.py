@@ -43,5 +43,14 @@ while True:
         break
 
 print("Your Bils is :",totalbill)
+coupons ={"50OFF":0.5,"20OFF":0.2}
+apply_coupon = input("Enter Coupon")
+if apply_coupon in coupons:
+    discount = totalbill*coupons[apply_coupon]
+    totalbill = totalbill-discount
+    print("After Coupon your bill is:",totalbill)
+else:
+    print("Invalid Coupon")
+
 
 
